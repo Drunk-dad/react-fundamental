@@ -1,18 +1,22 @@
-<!-- Basic JavaScript-rendered Hello World -->
-<!-- http://localhost:3000/isolated/exercise/01.html -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
-<!-- 🐨 Then create a <script type="module"> for your JavaScript -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attributes -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
 
-<!-- These next instructions are to be written in JavaScript in the <script> tag -->
-<!-- 🐨 Create a div -->
-<!--   💰 document.createElement('div') -->
+<body>
+	<div id="root"></div>
+	<script type="module">
+		const app = document.getElementById("root");
+		const content = document.createElement('div');
+		content.classList.add('container');
+		content.innerText = "Hello world"
+		app.appendChild(content);
+	</script>
+</body>
 
-<!-- 🐨 Set the div's textContent to 'Hello World' and className to 'container' -->
-<!--   💰 div.textContent = '...' -->
-
-<!-- 🐨 Append the div to the root div using `append` -->
-<!--   💰 document.getElementById('root') -->
-<!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+</html>
